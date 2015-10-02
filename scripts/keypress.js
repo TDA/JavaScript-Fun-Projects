@@ -16,10 +16,16 @@ $(document).ready(function () {
       case (code >= 65 && code <= 90):
       case (code >= 48  && code <= 57):
       case (code >= 97  && code <= 122):
-      case (code === 32):
-        console.log("legal");
+      case (code === 32 || code === 13 || code === 9 || code === 27):
+        // do nothing and return
+        return;
+        // break unnecessary, but lets complicate the code
         break;
-      case
+      case (code > 33 && code <= 47):
+      case (code > 57 && code <= 63):
+        // these need morphing
+        break;
+
 
     }
     //console.log(e, "pressed");
