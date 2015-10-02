@@ -9,6 +9,7 @@ $(document).ready(function () {
 
     // (code > 33 && code <= 47) || (code > 57 && code <= 63) || code == 17
     // if not an alphabet, letter or number, reject the key, lets irritate them, switch up the key mappings, BURN.
+    // this basically kills automated tests :D :D
 
     switch (true) {
       // let these fall through, these are ok
@@ -23,9 +24,11 @@ $(document).ready(function () {
         break;
       case (code > 33 && code <= 47):
       case (code > 57 && code <= 63):
+      case (code > 122):
         // these need morphing
+        console.log("Blocked bitches");
+        e.preventDefault();
         break;
-
 
     }
     //console.log(e, "pressed");
