@@ -5,6 +5,7 @@
 $(document).ready(function () {
   var name = $('#name');
   name.on("keypress", function (e) {
+    var self = this;
     var code = (e.keyCode ? e.keyCode : e.which);
 
     // (code > 33 && code <= 47) || (code > 57 && code <= 63) || code == 17
@@ -26,7 +27,9 @@ $(document).ready(function () {
       case (code > 57 && code <= 63):
       case (code > 122):
         // these need morphing
-        console.log("Blocked bitches");
+        var value = $(self).val();
+        value += 's';
+        $(self).val(value);
         e.preventDefault();
         break;
 
