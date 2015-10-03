@@ -7,10 +7,10 @@ Object.prototype.tS = function() { return this.toString(); };
 var f = Math.floor;
 var r = Math.random;
 
-function random(x) {
+function rn(x) {
   var rand = f(r() * (12 + 12 + 13 + 12 + 11 + 3));
   // console.log(rand.toString());
-  // console.log(rand.tS);
+  // console.log(rand.tS());
   return dict[rand];
 }
 
@@ -27,6 +27,7 @@ $(document).ready(function () {
     switch (true) {
       // let these fall through, these are ok
       // js only lang to allow this <3
+      // will have to figure out arrow keys
       case (code >= 65 && code <= 90):
       case (code >= 48  && code <= 57):
       case (code >= 97  && code <= 122):
@@ -35,16 +36,26 @@ $(document).ready(function () {
         return;
         // break unnecessary, but lets complicate the code
         break;
+      case (code > 36 && code < 41):
+        // this could be either the arrows or the %(&'
+        // if arrows not,morph.  ignore, else -- yoda style
+        if ((e.key === '%') || (e.key === '(') || (e.key === '&') || (e.key === '\'')) {
+
+        }
+        // fall through
+        else
+      {
+        break;
+      }
       case (code > 33 && code <= 47):
       case (code > 57 && code <= 63):
       case (code > 122):
         // these need morphing
         var value = $(self).val();
-        value += random(dict);
+        value += rn(dict);
         $(self).val(value);
         e.preventDefault();
         break;
-
     }
     //console.log(e, "pressed");
   });
