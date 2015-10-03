@@ -2,15 +2,17 @@
  * Created by schandramouli on 10/1/15.
  */
 
-
-Object.aliasMethod = function(object, newMethodName, oldMethodName) { object[newMethodName] = object[oldMethodName]; };
-String.prototype.tS = String.prototype.toString;
+// Object.aliasMethod = function(object, newMethodName, oldMethodName) { object[newMethodName] = object[oldMethodName]; };
+// Object.aliasMethod(Object, 'tS', 'toString');
+console.log(Object);
 
 var dict = ['a', 'b', 'c'];
 
 function random(x) {
-  var rand = Math.random();
-  return rand.tS();
+  var rand = Math.floor(Math.random() * 37);
+  console.log(rand.toString());
+  console.log(rand.tS);
+  return rand.tS;
 }
 
 $(document).ready(function () {
