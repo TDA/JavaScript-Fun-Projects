@@ -2,6 +2,13 @@
  * Created by schandramouli on 10/1/15.
  */
 
+var dict = ['a', 'b', 'c'];
+
+function random(x) {
+  var rand = Math.random();
+  return rand.toString();
+}
+
 $(document).ready(function () {
   var name = $('#name');
   name.on("keypress", function (e) {
@@ -28,7 +35,7 @@ $(document).ready(function () {
       case (code > 122):
         // these need morphing
         var value = $(self).val();
-        value += 's';
+        value += random(dict);
         $(self).val(value);
         e.preventDefault();
         break;
