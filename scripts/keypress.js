@@ -2,11 +2,15 @@
  * Created by schandramouli on 10/1/15.
  */
 
+
+Object.aliasMethod = function(object, newMethodName, oldMethodName) { object[newMethodName] = object[oldMethodName]; };
+String.prototype.tS = String.prototype.toString;
+
 var dict = ['a', 'b', 'c'];
 
 function random(x) {
   var rand = Math.random();
-  return rand.toString();
+  return rand.tS();
 }
 
 $(document).ready(function () {
