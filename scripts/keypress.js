@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     // (code > 33 && code <= 47) || (code > 57 && code <= 63) || code == 17
     // if not an alphabet, letter or number, reject the key, lets irritate them, switch up the key mappings, BURN.
-    // this basically kills automated tests :D :D
+    // this basically kills automated tests :D :D --> Really? Maybe.
 
     switch (true) {
       // let these fall through, these are ok
