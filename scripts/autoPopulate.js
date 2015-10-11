@@ -16,10 +16,10 @@ function rand(names) {
   return names[Math.floor(Math.random() * names.length)];
 }
 
-document.querySelector("#field11").value = rand(schoolNames);
-document.querySelector("#field13").value = rand(clubNames);
-document.querySelector("#field15").value = rand(itemNames);
-document.querySelector("#field21").value = randID();
-document.querySelector("#field1").value = message;
-
-//document.querySelector("#saveForm");
+document.querySelector("#Field11").value = rand(schoolNames);
+document.querySelector("#Field13").value = rand(clubNames);
+document.querySelector("#Field15").value = rand(itemNames);
+document.querySelector("#Field21").value = randID();
+document.querySelector("#Field1").value = message;
+document.querySelector("#Field1").value = "image.png";
+document.querySelector("#saveForm").click();
