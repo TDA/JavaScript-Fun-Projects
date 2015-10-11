@@ -21,5 +21,5 @@ document.querySelector("#Field13").value = rand(clubNames);
 document.querySelector("#Field15").value = rand(itemNames);
 document.querySelector("#Field21").value = randID();
 document.querySelector("#Field1").value = message;
-document.querySelector("#Field1").value = "image.png";
+document.querySelector("#Field2").value = "image.png";
 document.querySelector("#saveForm").click();
