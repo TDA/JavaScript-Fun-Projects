@@ -16,7 +16,8 @@ $(document).ready(function() {
   var options = {
     whiteList: {
       a: ['href', 'title', 'target']
-    }
+    },
+    stripIgnoreTag: true
   };
   name = filterXSS(name, options);
   $('#xss-play').html("hello" + name);
