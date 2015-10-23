@@ -21,4 +21,6 @@ $(document).ready(function() {
   };
   name = filterXSS(name, options);
   $('#xss-play').html("hello" + name);
+
+
 });
