@@ -14,9 +14,6 @@ function getParameterByName(name) {
 $(document).ready(function() {
   var name = getParameterByName("name");
   var options = {
-    whiteList: {
-      a: ['href', 'title', 'target']
-    },
     stripIgnoreTag: true
   };
   name = filterXSS(name, options);

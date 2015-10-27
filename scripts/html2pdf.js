@@ -6,14 +6,16 @@ $(document).ready(function() {
     var pdf = new jsPDF('p', 'pt', 'letter');
     // source can be HTML-formatted string, or a reference
     // to an actual DOM element from which the text will be scraped.
-    source = $('#printable')[0];
-    name = $('#printable').attr('data-name') || 'Important';
-    alert(name);
+    // This element needs to be the parent tag, and not the child
+    // that needs printing
+    var printable = $('#printable');
+    source = printable[0];
+    name = printable.attr('data-name') || 'Important';
     margins = {
       top: 80,
       bottom: 60,
-      left: 40,
-      width: 522
+      left: 60,
+      width: 640
     };
     pdf.fromHTML(
       source, // HTML string or DOM elem ref.
@@ -22,11 +24,9 @@ $(document).ready(function() {
         'width': margins.width
       },
       function (dispose) {
-        // dispose: object with X, Y of the last line add to the PDF
-        //          this allow the insertion of new lines after html
+        // callback
         pdf.save(name + '.pdf');
       }
       , margins);
-    //alert("pdf");
   });
 });
