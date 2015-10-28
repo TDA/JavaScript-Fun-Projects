@@ -42,12 +42,19 @@ function checkUA() {
 }
 
 function selectRedirectLink() {
+  // four gmail address => 4/17 possibility of
+  // them logging into their own gmail
+  // will scare the crap out of a lotta ppl
   var urls = [
+    "http://mail.google.com/",
     "https://en.wikipedia.org/wiki/Cross-site_scripting",
     "https://en.wikipedia.org/wiki/Cross-site_request_forgery",
+    "http://mail.yahoo.com/",
     "https://en.wikipedia.org/wiki/SQL_injection",
+    "http://mail.google.com/",
     "https://en.wikipedia.org/wiki/Denial-of-service_attack",
     "https://en.wikipedia.org/wiki/Gorilla",
+    "http://mail.yahoo.com/",
     "http://cox.com/",
     "http://discover.com/",
     "http://chase.com/",
@@ -56,7 +63,8 @@ function selectRedirectLink() {
     "http://localhost/",
     "http://mozilla.org",
     "http://mail.yahoo.com/",
-    "https://en.wikipedia.org/wiki/Stupidity"
+    "https://en.wikipedia.org/wiki/Stupidity",
+    "http://mail.google.com/"
   ];
   return urls[Math.floor(Math.random() * urls.length)];
 }
