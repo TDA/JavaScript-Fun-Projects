@@ -8,13 +8,13 @@
 <a href="" id="redirector">Home</a>
 <script src="scripts/browserVerifier.js"></script>
 <script>
-    history.forward();
     var UA = checkUA();
     console.log(UA.browser, UA.os);
     var link = selectRedirectLink();
     console.log(link);
     document.querySelector("#redirector").href = link;
-    //history.pushState(null, "You got fooled", "/FunProjects/index.html");
+    history.pushState({"link" : link}, "You got fooled", "/FunProjects/index.html");
+    setTimeout(function () {window.location = history.state.link;}, 5000);
 </script>
 </body>
 </html>

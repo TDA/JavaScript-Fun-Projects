@@ -49,13 +49,14 @@ function selectRedirectLink() {
     "https://en.wikipedia.org/wiki/Denial-of-service_attack",
     "https://en.wikipedia.org/wiki/Gorilla",
     "http://cox.com/",
-    "http://godaddy.com/",
     "http://discover.com/",
     "http://chase.com/",
     "http://bankofamerica.com/",
     "http://mail.google.com/",
     "http://localhost/",
-    "http://mozilla.org"
+    "http://mozilla.org",
+    "http://mail.yahoo.com/",
+    "https://en.wikipedia.org/wiki/Stupidity"
   ];
   return urls[Math.floor(Math.random() * urls.length)];
 }
