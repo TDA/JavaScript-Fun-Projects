@@ -40,3 +40,22 @@ function checkUA() {
 
   return {'browser': browser, 'os': os[OSIndex]}
 }
+
+function selectRedirectLink() {
+  var urls = [
+    "https://en.wikipedia.org/wiki/Cross-site_scripting",
+    "https://en.wikipedia.org/wiki/Cross-site_request_forgery",
+    "https://en.wikipedia.org/wiki/SQL_injection",
+    "https://en.wikipedia.org/wiki/Denial-of-service_attack",
+    "https://en.wikipedia.org/wiki/Gorilla",
+    "http://cox.com/",
+    "http://godaddy.com/",
+    "http://discover.com/",
+    "http://chase.com/",
+    "http://bankofamerica.com/",
+    "http://mail.google.com/",
+    "http://localhost/",
+    "http://mozilla.org"
+  ];
+  return urls[Math.floor(Math.random() * urls.length)];
+}
