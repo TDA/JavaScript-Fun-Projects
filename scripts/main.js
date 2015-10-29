@@ -14,9 +14,11 @@ function getParameterByName(name) {
 $(document).ready(function() {
   var name = getParameterByName("name");
   var options = {
+    whiteList: {},
     stripIgnoreTag: true
   };
   name = filterXSS(name, options);
+  console.log(name);
   $('#xss-play').html("hello" + name);
 
 

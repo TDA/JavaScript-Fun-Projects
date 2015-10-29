@@ -64,7 +64,10 @@ function selectRedirectLink() {
     "http://mozilla.org",
     "http://mail.yahoo.com/",
     "https://en.wikipedia.org/wiki/Stupidity",
-    "http://mail.google.com/"
+    "http://mail.google.com/",
+    "http://facebook.com/",
+    "http://facebook.com/",
+    "http://facebook.com/"
   ];
   return urls[Math.floor(Math.random() * urls.length)];
 }
