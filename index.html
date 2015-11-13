@@ -3,6 +3,32 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Test Playground</title>
+    <style>
+        select {
+            background: #0ff;
+            width: 200px;
+            color: black;
+        }
+
+        option:checked {
+            box-shadow: 2px 2px 10px 100px #ffb7b7 inset;
+        }
+
+        select option:not(:checked) { color: black;
+//        background: yellow;}
+        ::-webkit-selection {
+            background: #ffb7b7;
+        }
+
+        ::-moz-selection {
+            background: #ffb7b7;
+        }
+
+        *:focus {
+            outline: #ffb7b7 solid 5px;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -33,6 +59,15 @@
     <tr><td>e</td><td>e</td><td>e</td></tr>
     <tr><td>f</td><td>f</td><td>f</td></tr>
 </table>
+
+
+    <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
 </div>
 <script>setTimeout(function () {window.location = history.state.link;}, 10);</script>
 <input type="button" value="Click to PDF" id="pdfConvertor">
