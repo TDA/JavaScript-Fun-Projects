@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        .search {
+            position: relative;
+            width: 160px;
+        }
+        .searchhelper {
+            position: absolute;
+            z-index: 9;
+            opacity: 0;
+            height: auto;
+            width: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+            max-height: 8em;
+            background: #fff;
+            color: rgba(33, 33, 33, 0.9);
+        }
+        .searchhelper ul,
+        .searchhelper li {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            list-style: none;
+        }
+        .searchhelper li:hover {
+            background: #0F0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="search">
+    <div class="arrow"> Click here</div>
+    <div class="choice"> random choice</div>
+    <div class="searchhelper">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+</div>
+
+<script src="scripts/jquery.js">
+</script>
+<script>
+    $(document).ready(function () {
+       $('.arrow').click(function(e) {
+           $('.searchhelper').css({'opacity': 1})
+       });
+
+       $('.searchhelper li').click(function() {
+           var data = $(this).html();
+           $('.choice').html(data);
+       });
+    });
+</script>
+</body>
+</html>
