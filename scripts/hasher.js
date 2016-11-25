@@ -9,7 +9,7 @@ function hashCode(str) {
     char = str.charCodeAt(i);
     //hash = ((hash << 5) - hash) + char; /* is the same as hash * 31 + char */
     hash = hash * 31 + char;
-    //hash = hash & hash; // this has destructive nature, and we can avoid it for local testing
+    hash = hash & hash; // this has destructive nature, and we can avoid it for local testing
     console.log(hash);
   }
   return hash;
@@ -43,4 +43,4 @@ function reverseHashCode(str) {
   return hash;
 }
 
-reverseHashCode("1897887302574337");
+reverseHashCode("1384014081");
